@@ -1,18 +1,17 @@
-# AuroEdu_assignment
+# **AuroEdu Assignment**  
 
-# Process: 
+## **Process Overview**  
 
-# Connect to the PostgreSQL database and define the database table.
+1. **Connect to the PostgreSQL database** and define the required table schema.  
+2. **Implement the `add_document` API** to add documents.  
+3. **Generate vector embeddings** for the documents and store them in the database.  
+4. **Implement the `select_documents` API** to allow users to specify document preferences.  
+5. **Implement the `ask_question` API** to handle user queries efficiently.  
 
-# Implement the add_document API to add documents.
+## **Status**  
 
-# Generate vector embeddings for the documents and store them in the database.
+✅ All APIs have been tested and are running perfectly.  
 
-# Implement the select_documents API to allow users to specify document preferences.
+## **Future Improvement**  
 
-# Implement the ask_question API to handle user queries.
-
-
-# All the APIs are tested and running perfectly
-# There is a more efficient method where we don’t need to store embeddings manually, PGVector can automate the process
-# However, due to time constraints, I was unable to implement it
+There is a more efficient approach where **PGVector** can automate the embedding process, eliminating the need to store embeddings manually. However, due to time constraints, this has not been implemented yet.  
