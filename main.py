@@ -165,7 +165,7 @@ def ask_question(query: query, db: Session = Depends(get_db)):
     # Load embeddings into pgvector for similarity search
     vectorstore = PGVector(
         collection_name="documents",
-        connection_string="postgresql://rag_user:123@localhost/rag_db",
+        connection_string=DATABASE_URL,
         embedding_function=embedding_model
     )
 
