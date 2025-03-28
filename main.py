@@ -169,7 +169,13 @@ def ask_question(query: query, db: Session = Depends(get_db)):
         embedding_function=embedding_model
     )
 
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 3}) 
+    retriever = vectorstore.as_retriever(
+        search_kwargs={
+            "k": 3,
+            "filter": {"id": {"$in": selected_document_ids}}
+        }
+    )
+ 
 
     qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
 
